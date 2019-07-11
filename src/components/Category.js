@@ -36,6 +36,8 @@ export default class Category extends React.Component {
             changeState = "návrat k neutrálnímu postoji"
         }
 
+        const changeStateToPrint = changeState ? "!!!" : ""
+
         return (
             <div className="row">
                 <div className="col-md-4 font-weight-bold">
@@ -45,7 +47,7 @@ export default class Category extends React.Component {
                     {this.state.currentState}
                 </div>
                 <div className="col-md-4">
-                    {changeState}
+                    <span className="no-print">{changeState}</span>{changeStateToPrint}
                 </div>
             </div>
         )
