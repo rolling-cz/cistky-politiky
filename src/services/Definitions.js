@@ -46,7 +46,7 @@ function getPolicyList() {
                 "name": "Internacionála",
                 "default": "Žádné preference",
                 "style": "TEMPORARY",
-                "policies": ["Žádné preference", "Německo", "Itálie", "Polsko", "Francie", "Španělsko", "Československo"]
+                "policies": ["Žádné preference", "Německo", "Itálie", "Polsko", "Francie", "Jugoslávie", "Československo"]
             }]
         },{
             "name": "Hospodářství",
@@ -62,7 +62,7 @@ function getPolicyList() {
                 "name": "Bezpečnostní hrozby",
                 "default": "Reakcionáři",
                 "style": "STABLE",
-                "policies": ["Reakcionáři", "Anarchisti", "Cizí agenti"]
+                "policies": ["Reakcionáři", "Cizí agenti", "Trockisti"]
             }]
         },{
             "name": "Socioekonomické ukazatele",
@@ -70,7 +70,7 @@ function getPolicyList() {
                 "name": "Třídní původ",
                 "default": "Na původu nezáleží",
                 "style": "TEMPORARY",
-                "policies": ["Na původu nezáleží", "Buržoázní myšlení je dědičné", "Dělnická výchova je nejlepší"]
+                "policies": ["Na původu nezáleží", "Dělnický důvod je důležitý", "Bolševiská šlechta"]
             },{
                 "name": "Soukromý majetek",
                 "default": "Je možný",
@@ -80,7 +80,7 @@ function getPolicyList() {
                 "name": "Vzdělání",
                 "default": "Není důležité",
                 "style": "TEMPORARY",
-                "policies": ["Není důležité", "Inteligence jsou agenti imperialismu", "Vysoká škola života je nejlepší příprava"]
+                "policies": ["Není důležité", "Pracující inteligence je předvoj dělnictva", "Vysoká škola života je nejlepší příprava"]
             },{
                 "name": "Postoj k náboženství",
                 "default": "Je to opium lidstva",
@@ -90,7 +90,7 @@ function getPolicyList() {
                 "name": "Postoj k ženám",
                 "default": "Neutrální",
                 "style": "TEMPORARY",
-                "policies": ["Neutrální", "Potřeba zavést rovnoprávnost", "Ženy jsou slabší pohlaví"]
+                "policies": ["Neutrální", "Ženy vpřed!", "Ženy jsou slabší pohlaví"]
             },{
                 "name": "Věk",
                 "default": "Neutrální",
@@ -103,7 +103,7 @@ function getPolicyList() {
                 "name": "Životní styl",
                 "default": "Přiměřený",
                 "style": "TEMPORARY",
-                "policies": ["Přiměřený", "Skromnost je ctnost", "Užívejme výdobytků socialsmus naplno"]
+                "policies": ["Přiměřený", "Skromnost je ctnost", "Dekadence"]
             },{
                 "name": "Rodinné poměry",
                 "default": "Liberální přístup",
@@ -113,7 +113,7 @@ function getPolicyList() {
                 "name": "Práce a kolektiv",
                 "default": "Zdravá konkurence",
                 "style": "STABLE",
-                "policies": ["Zdravá konkurence", "Soudržnost skupiny je nade vše"]
+                "policies": ["Zdravá konkurence", "Boj proti oportunismu", "Volíme nejoblíbenějšího soudruha", "Krysí závod je dobrý závod"]
             }]
         },{
             "name": "Umělecké směry",
@@ -121,7 +121,12 @@ function getPolicyList() {
                 "name": "Preferované umění",
                 "default": "Volný režim",
                 "style": "STABLE",
-                "policies": ["Volný režim", "Sociální realismus", "Kubismus", "Abstraktní umění", "Neorealismus"]
+                "policies": ["Volný režim", "Sociální realismus", "Futurismus", "Abstraktní umění", "Neorealismus"]
+            },{
+                "name": "Objet umění",
+                "default": "Volný režim",
+                "style": "STABLE",
+                "policies": ["Volný režim", "Glorifikace soudruhů", "Glorifikace pouze vůdce", "Glorifikace průmyslu a výdobytků soucialismu"]
             }]
         }
         ]
