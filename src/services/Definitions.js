@@ -121,9 +121,9 @@ function getPolicyList() {
                 "name": "Preferované umění",
                 "default": "Volný režim",
                 "style": "STABLE",
-                "policies": ["Volný režim", "Sociální realismus", "Futurismus", "Abstraktní umění", "Neorealismus"]
+                "policies": ["Volný režim", "Socialistický realismus", "Futurismus", "Abstraktní umění", "Neorealismus"]
             },{
-                "name": "Objet umění",
+                "name": "Objekt umění",
                 "default": "Volný režim",
                 "style": "STABLE",
                 "policies": ["Volný režim", "Glorifikace soudruhů", "Glorifikace pouze vůdce", "Glorifikace průmyslu a výdobytků soucialismu"]
