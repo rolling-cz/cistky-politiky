@@ -121,7 +121,7 @@ function getPolicyList() {
                 "name": "Preferované umění",
                 "default": "Volný režim",
                 "style": "STABLE",
-                "policies": ["Volný režim", "Socialistický realismus", "Futurismus", "Abstraktní umění", "Neorealismus"]
+                "policies": ["Volný režim", "Socialistický realismus", "Futurismus", "Abstraktní umění"]
             },{
                 "name": "Objekt umění",
                 "default": "Volný režim",
