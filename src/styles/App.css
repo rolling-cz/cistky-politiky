@@ -1,5 +1,11 @@
+@font-face {
+   font-family: 'remington-cz';
+      src: url('remington-cz.ttf') format('truetype');
+}
+
 .App {
   text-align: center;
+  font-family: 'remington-cz';
 }
 
 @media only print {
