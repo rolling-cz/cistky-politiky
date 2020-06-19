@@ -39,9 +39,9 @@ function getPolicyList() {
                 "policies": ["Nepřítel", "Neutrální", "Spojenec"]
             },{
                 "name": "Armáda",
-                "default": "Defenzivní politika",
-                "style": "STABLE",
-                "policies": ["Defenzivní politika", "Ofenzivní politika", "Pacifismus"]
+                "default": "Vyvážená politika",
+                "style": "TEMPORARY",
+                "policies": ["Vyvážená politika", "Defenzivní politika", "Ofenzivní politika", "Izolacionismus"]
             },{
                 "name": "Internacionála",
                 "default": "Žádné preference",
