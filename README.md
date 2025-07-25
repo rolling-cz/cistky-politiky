@@ -16,6 +16,9 @@ Open [http://localhost:3000](http://localhost:3001) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+If the command is failing because of "Error: error:0308010C:digital envelope routines::unsupported",
+be sure to set Node to work with a legacy openssl provider instead via "export NODE_OPTIONS=--openssl-legacy-provider".
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
