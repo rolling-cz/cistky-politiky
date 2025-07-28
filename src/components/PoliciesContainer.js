@@ -3,7 +3,7 @@ import {getPolicyList, getStartPolicies} from "../services/Definitions";
 import Cluster from "./Cluster";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import {generateNewPolicies} from "../services/Generator";
+import {generateNewPolicies, relationshipShift} from "../services/Generator";
 
 export default class PoliciesContainer extends React.Component {
     constructor(props) {
@@ -12,28 +12,40 @@ export default class PoliciesContainer extends React.Component {
         this.state = {
             currentState: getStartPolicies(),
             history: [],
-            showResetModal: false
+            showResetModal: false,
+            positiveShiftApplied: false,
+            negativeShiftApplied: false,
         }
     }
 
     nextAct() {
         this.state.history.push(this.state.currentState);
         const newState = generateNewPolicies(getPolicyList(), this.state.currentState);
-        this.setState({currentState: newState});
+        this.setState({currentState: newState, positiveShiftApplied: false, negativeShiftApplied: false});
     }
 
     rerunAct() {
         const previousState = this.getPreviousState();
         const newState = generateNewPolicies(getPolicyList(), previousState);
-        this.setState({currentState: newState});
+        this.setState({currentState: newState, positiveShiftApplied: false, negativeShiftApplied: false});
     }
 
     completeReset() {
-        this.setState({currentState: getStartPolicies(), history: [], showResetModal: false});
+        this.setState({currentState: getStartPolicies(), history: [], showResetModal: false, positiveShiftApplied: false, negativeShiftApplied: false});
     }
 
     getPreviousState() {
         return this.state.history.length > 0 ? this.state.history[this.state.history.length - 1] : [];
+    }
+
+    handleCategoryShift(key, shift) {
+        let newState = JSON.parse(JSON.stringify(this.state.currentState));
+        relationshipShift(getPolicyList(), newState, key, shift);
+        this.setState({
+            currentState: newState,
+            positiveShiftApplied: this.state.positiveShiftApplied || shift === 1,
+            negativeShiftApplied: this.state.negativeShiftApplied || shift === -1,
+        });
     }
 
     renderResetConfirm() {
@@ -68,6 +80,9 @@ export default class PoliciesContainer extends React.Component {
                         return <Cluster data={cluster}
                                         state={this.state.currentState[cluster.name]}
                                         previousState={previousState[cluster.name] || {}}
+                                        handleCategoryShift={(key, shift) => this.handleCategoryShift(key, shift)}
+                                        positiveShiftApplied={this.state.positiveShiftApplied}
+                                        negativeShiftApplied={this.state.negativeShiftApplied}
                                         key={i}/>
                     })
                 }

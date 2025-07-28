@@ -24,6 +24,9 @@ export default class Cluster extends React.Component {
                    return <Category data={category}
                                     state={this.state.currentState[category.name]}
                                     previousState={this.state.previousState[category.name]}
+                                    handleCategoryShift={this.props.handleCategoryShift}
+                                    positiveShiftApplied={this.props.positiveShiftApplied}
+                                    negativeShiftApplied={this.props.negativeShiftApplied}
                                     key={i}/>
                 })
             }

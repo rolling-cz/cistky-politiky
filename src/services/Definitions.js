@@ -16,117 +16,73 @@ module.exports.getPolicyList = getPolicyList
 function getPolicyList() {
     return {
         "clusters": [{
-            "name": "Zahraniční politika",
-            "categories": [{
-                "name": "Přístup k národnostem",
-                "default": "Národnostní pluralismus",
-                "style": "TEMPORARY",
-                "policies": ["Národnostní pluralismus", "Poláci jsou nepřátelé", "Kazaši jsou nepřátelé", "Židé jsou nepřátelé", "Ukrajinci jsou nepřátelé"]
-            },{
-                "name": "Vztah k Japonsku",
-                "default": "Nepřítel",
-                "style": "STABLE",
-                "policies": ["Nepřítel", "Neutrální", "Spojenec"]
-            },{
-                "name": "Vztah k Německu",
-                "default": "Nepřítel",
-                "style": "STABLE",
-                "policies": ["Nepřítel", "Neutrální", "Spojenec"]
-            },{
-                "name": "Vztah k Číně",
-                "default": "Nepřítel",
-                "style": "STABLE",
-                "policies": ["Nepřítel", "Neutrální", "Spojenec"]
-            },{
-                "name": "Armáda",
-                "default": "Vyvážená politika",
-                "style": "TEMPORARY",
-                "policies": ["Vyvážená politika", "Defenzivní politika", "Ofenzivní politika", "Izolacionismus"]
-            },{
-                "name": "Internacionála",
-                "default": "Žádné preference",
-                "style": "TEMPORARY",
-                "policies": ["Žádné preference", "Německo", "Itálie", "Polsko", "Francie", "Jugoslávie", "Československo"]
-            }]
-        },{
-            "name": "Hospodářství",
-            "categories": [{
-                "name": "Ekonomický plán",
-                "default": "Vyvážené hospodářství",
-                "style": "STABLE",
-                "policies": ["Vyvážené hospodářství", "Zaměření na pšenici", "Zaměření na ocel", "Zaměření na palivo", "Výstavba nových zařízení"]
-            }]
-        },{
             "name": "Vnitřní politika",
             "categories": [{
-                "name": "Bezpečnostní hrozby",
-                "default": "Reakcionáři",
-                "style": "STABLE",
-                "policies": ["Reakcionáři", "Cizí agenti", "Trockisti"]
-            }]
-        },{
-            "name": "Socioekonomické ukazatele",
-            "categories": [{
-                "name": "Třídní původ",
-                "default": "Na původu nezáleží",
-                "style": "TEMPORARY",
-                "policies": ["Na původu nezáleží", "Dělnický důvod je důležitý", "Bolševiská šlechta"]
-            },{
-                "name": "Soukromý majetek",
-                "default": "Je možný",
-                "style": "TEMPORARY",
-                "policies": ["Je možný", "Bohatsví ukazuje míru schopností", "Peníze korumpují"]
-            },{
-                "name": "Vzdělání",
-                "default": "Není důležité",
-                "style": "TEMPORARY",
-                "policies": ["Není důležité", "Pracující inteligence je předvoj dělnictva", "Vysoká škola života je nejlepší příprava"]
-            },{
-                "name": "Postoj k náboženství",
-                "default": "Je to opium lidstva",
-                "style": "TEMPORARY",
-                "policies": ["Je to opium lidstva", "Církve jsou utlačovatelé dělnictva", "Víra pomůže vybudovat socialismus"]
-            },{
-                "name": "Postoj k ženám",
-                "default": "Neutrální",
-                "style": "TEMPORARY",
-                "policies": ["Neutrální", "Ženy vpřed!", "Ženy jsou slabší pohlaví"]
-            },{
-                "name": "Věk",
-                "default": "Neutrální",
-                "style": "TEMPORARY",
-                "policies": ["Neutrální", "Mládí vpřed", "Zkušenost a rozvaha"]
-            }]
-        },{
-            "name": "Sociální poměry ",
-            "categories": [{
-                "name": "Životní styl",
-                "default": "Přiměřený",
-                "style": "TEMPORARY",
-                "policies": ["Přiměřený", "Skromnost je ctnost", "Dekadence"]
-            },{
                 "name": "Rodinné poměry",
-                "default": "Liberální přístup",
-                "style": "STABLE",
-                "policies": ["Liberální přístup", "Rodina je základ státu", "Monogamie je buržoazní přežitek"]
+                "default": "Normální",
+                "button": false,
+                "policies": ["Velmi konzervativní (nukleární rodina)", "Dekadence", "Rodina by neměla existovat", "Normální"]
             },{
-                "name": "Práce a kolektiv",
-                "default": "Zdravá konkurence",
-                "style": "STABLE",
-                "policies": ["Zdravá konkurence", "Boj proti oportunismu", "Volíme nejoblíbenějšího soudruha", "Krysí závod je dobrý závod"]
+                "name": "Národnostní politika",
+                "default": "Národnosti nejsou tak důležité",
+                "button": false,
+                "policies": ["Ruský šovinismus", "Absolutní internacionalismus (kvóty pro menšiny)", "Oblíbený národ (neruský) + Nenáviděný národ zrádců", "Národnosti nejsou tak důležité"]
+            },{
+                "name": "Náboženství",
+                "default": "Omezená náboženská tolerance",
+                "button": false,
+                "policies": ["Militantní atheismus", "Hardcore ortodoxní křesťanství", "Mysticismus", "Omezená náboženská tolerance"]
+            },{
+                "name": "Ekonomika",
+                "default": "Normální",
+                "button": false,
+                "policies": ["Bohatství je nutnost pro to být členem politbyra", "Být bohatý je nežádoucí", "Střední třída je nejlepší", "Normální"]
             }]
         },{
-            "name": "Umělecké směry",
+            "name": "Názory Vůdce",
             "categories": [{
-                "name": "Preferované umění",
-                "default": "Volný režim",
-                "style": "STABLE",
-                "policies": ["Volný režim", "Socialistický realismus", "Futurismus", "Abstraktní umění"]
+                "name": "Gender",
+                "default": "Nezáleží",
+                "button": false,
+                "policies": ["Nezáleží", "Moc patří mužům", "Moc patří ženám"]
             },{
-                "name": "Objekt umění",
-                "default": "Volný režim",
-                "style": "STABLE",
-                "policies": ["Volný režim", "Glorifikace soudruhů", "Glorifikace pouze vůdce", "Glorifikace průmyslu a výdobytků soucialismu"]
+                "name": "Filosofie",
+                "default": "Vyvážená",
+                "button": false,
+                "policies": ["Vyvážená", "Futurismus", "Tradicionalismus"]
+            }]
+        },{
+            "name": "Vztahy s mocnostmi",
+            "categories": [{
+                "name": "Německo",
+                "default": "Neutrální",
+                "button": true,
+                "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
+            },{
+                "name": "Japonsko",
+                "default": "Neutrální",
+                "button": true,
+                "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
+            },{
+                "name": "Velká Británie",
+                "default": "Neutrální",
+                "button": true,
+                "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
+            },{
+                "name": "Spojené státy americké",
+                "default": "Neutrální",
+                "button": true,
+                "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
+            },{
+                "name": "Čína",
+                "default": "Neutrální",
+                "button": true,
+                "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
+            },{
+                "name": "Turecko",
+                "default": "Neutrální",
+                "button": true,
+                "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
             }]
         }
         ]
