@@ -20,22 +20,22 @@ function getPolicyList() {
             "categories": [{
                 "name": "Rodinné poměry",
                 "default": "Normální",
-                "button": false,
+                "relationship": false,
                 "policies": ["Velmi konzervativní (nukleární rodina)", "Dekadence", "Rodina by neměla existovat", "Normální"]
             },{
                 "name": "Národnostní politika",
                 "default": "Národnosti nejsou tak důležité",
-                "button": false,
+                "relationship": false,
                 "policies": ["Ruský šovinismus", "Absolutní internacionalismus (kvóty pro menšiny)", "Oblíbený národ (neruský) + Nenáviděný národ zrádců", "Národnosti nejsou tak důležité"]
             },{
                 "name": "Náboženství",
                 "default": "Omezená náboženská tolerance",
-                "button": false,
+                "relationship": false,
                 "policies": ["Militantní atheismus", "Hardcore ortodoxní křesťanství", "Mysticismus", "Omezená náboženská tolerance"]
             },{
                 "name": "Ekonomika",
                 "default": "Normální",
-                "button": false,
+                "relationship": false,
                 "policies": ["Bohatství je nutnost pro to být členem politbyra", "Být bohatý je nežádoucí", "Střední třída je nejlepší", "Normální"]
             }]
         },{
@@ -43,12 +43,12 @@ function getPolicyList() {
             "categories": [{
                 "name": "Gender",
                 "default": "Nezáleží",
-                "button": false,
+                "relationship": false,
                 "policies": ["Nezáleží", "Moc patří mužům", "Moc patří ženám"]
             },{
                 "name": "Filosofie",
                 "default": "Vyvážená",
-                "button": false,
+                "relationship": false,
                 "policies": ["Vyvážená", "Futurismus", "Tradicionalismus"]
             }]
         },{
@@ -56,32 +56,32 @@ function getPolicyList() {
             "categories": [{
                 "name": "Německo",
                 "default": "Neutrální",
-                "button": true,
+                "relationship": true,
                 "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
             },{
                 "name": "Japonsko",
                 "default": "Neutrální",
-                "button": true,
+                "relationship": true,
                 "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
             },{
                 "name": "Velká Británie",
                 "default": "Neutrální",
-                "button": true,
+                "relationship": true,
                 "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
             },{
                 "name": "Spojené státy americké",
                 "default": "Neutrální",
-                "button": true,
+                "relationship": true,
                 "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
             },{
                 "name": "Čína",
                 "default": "Neutrální",
-                "button": true,
+                "relationship": true,
                 "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
             },{
                 "name": "Turecko",
                 "default": "Neutrální",
-                "button": true,
+                "relationship": true,
                 "policies": ["Válka", "Rivalita", "Neutrální", "Inspirativní", "Spojenec"]
             }]
         }

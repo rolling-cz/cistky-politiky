@@ -18,7 +18,9 @@ export default class Category extends React.Component {
 
     render() {
         let changeState
+        let changeDistance = 0;
         const def = this.state.data
+
         if (def.default !== this.state.currentState
             && this.state.currentState !== this.state.previousState) {
             changeState = "změna"
@@ -28,7 +30,13 @@ export default class Category extends React.Component {
             changeState = "návrat k neutrálnímu postoji"
         }
 
-        const changeStateToPrint = changeState ? "!!!" : ""
+        if (def.relationship === true) {
+            let currentStateValue = def.policies.indexOf(this.state.currentState);
+            let previousStateValue = def.policies.indexOf(this.state.previousState);
+            changeDistance = previousStateValue !== -1 ? Math.abs(currentStateValue - previousStateValue) : 0;
+        }
+
+        const changeStateToPrint = changeState ? ("!" + (changeDistance !== 0 ? " (" + changeDistance + ")" : "")) : ""
 
         return (
             <div className="row">
@@ -42,13 +50,13 @@ export default class Category extends React.Component {
                     <span className="no-print">{changeState}</span>{changeStateToPrint}
                 </div>
                 <div className="col-md-2 no-print">
-                    {def.button === true && !this.props.positiveShiftApplied && (
+                    {def.relationship === true && !this.props.positiveShiftApplied && (
                         <Button variant="success" onClick={() => this.props.handleCategoryShift(this.state.data.name, 1)}
                                 className="mr-2">
                             +1
                         </Button>
                     )}
-                    {def.button === true && !this.props.negativeShiftApplied && (
+                    {def.relationship === true && !this.props.negativeShiftApplied && (
                         <Button variant="danger" onClick={() => this.props.handleCategoryShift(this.state.data.name, -1)}
                                 className="mr-2">
                             -1
