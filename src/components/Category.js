@@ -1,5 +1,6 @@
 import * as React from "react";
 import Button from "react-bootstrap/Button";
+import { t } from "../localization";
 
 export default class Category extends React.Component {
     constructor(props) {
@@ -23,11 +24,11 @@ export default class Category extends React.Component {
 
         if (def.default !== this.state.currentState
             && this.state.currentState !== this.state.previousState) {
-            changeState = "změna"
+            changeState = t("změna")
         } else if (def.default === this.state.currentState
             && this.state.currentState !== this.state.previousState
             && this.state.previousState) {
-            changeState = "návrat k neutrálnímu postoji"
+            changeState = t("návrat k neutrálnímu postoji")
         }
 
         if (def.relationship === true) {
@@ -41,10 +42,10 @@ export default class Category extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-4 font-weight-bold">
-                    {this.state.data.name}
+                    {t(this.state.data.name)}
                 </div>
                 <div className="col-md-4">
-                    {this.state.currentState}
+                    {t(this.state.currentState)}
                 </div>
                 <div className="col-md-2">
                     <span className="no-print">{changeState}</span>{changeStateToPrint}

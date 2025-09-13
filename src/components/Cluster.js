@@ -1,5 +1,6 @@
 import * as React from "react";
 import Category from "./Category";
+import { t } from "../localization";
 
 export default class Cluster extends React.Component {
     constructor(props) {
@@ -18,7 +19,7 @@ export default class Cluster extends React.Component {
 
     render() {
         return (<div className="mt-3">
-            <h5>Oblast {this.state.data.name}</h5>
+            <h5>{t("Oblast")} {t(this.state.data.name)}</h5>
             {
                 this.state.data.categories.map((category, i) => {
                    return <Category data={category}

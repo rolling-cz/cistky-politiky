@@ -4,6 +4,7 @@ import Cluster from "./Cluster";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import {generateNewPolicies, relationshipShift} from "../services/Generator";
+import { t } from "../localization";
 
 export default class PoliciesContainer extends React.Component {
     constructor(props) {
@@ -52,11 +53,11 @@ export default class PoliciesContainer extends React.Component {
         return (
             <Modal show={this.state.showResetModal} onHide={() => this.setState({showResetModal: false})}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Kompletní reset</Modal.Title>
+                    <Modal.Title>{t("Kompletní reset")}</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
-                    <p>Opravdu chcete resetovat politiky a začít ze startovních? Historie se také promaže.</p>
+                    <p>{t("Opravdu chcete resetovat politiky a začít ze startovních? Historie se také promaže.")}</p>
                 </Modal.Body>
 
                 <Modal.Footer>
@@ -69,7 +70,7 @@ export default class PoliciesContainer extends React.Component {
     render() {
         const list = getPolicyList();
         const previousState = this.getPreviousState();
-        const mainTitle = this.state.history.length > 0 ? `Státní politiky pro ${this.state.history.length}.dějství` : "Startovní státní politiky"
+        const mainTitle = this.state.history.length > 0 ? `${t("Státní politiky pro")} ${this.state.history.length}.${t("dějství")}` : t("Startovní státní politiky")
 
         return (
             <div className="container mt-3">
@@ -88,13 +89,13 @@ export default class PoliciesContainer extends React.Component {
                 }
                 <div className="mt-3 no-print">
                     <Button variant="primary" onClick={this.nextAct.bind(this)} className="mr-2">
-                        Další dějství
+                        {t("Další dějství")}
                     </Button>
                     <Button variant="secondary" onClick={this.rerunAct.bind(this)} className="mr-2">
-                        Přehodit dějství
+                        {t("Přehodit dějství")}
                     </Button>
                     <Button variant="danger" onClick={() => this.setState({showResetModal: true})} className="mr-2">
-                        Kompletně resetovat
+                        {t("Kompletně resetovat")}
                     </Button>
                 </div>
             </div>
